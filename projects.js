@@ -2,44 +2,59 @@ const projects = [
   {
     name: "Syllabyte",
     image: "Pictures/syllabyte.png",
-    link: "https://www.youtube.com/watch?v=2kAptDVbWks"
-  },
-  {
-    name: "IDK Them",
-    image: "Pictures/you_dont_know.png",
-    link: "https://idk-them.vercel.app"
+    link: "https://www.youtube.com/watch?v=2kAptDVbWks",
+    from: new Date("2023-05-01"),
+    to: new Date()
   },
   {
     name: "GIS Mapping System",
     image: "Pictures/mapper.png",
-    link: "https://github.com/HarshitSohaney/Mapper-65"
+    link: "https://github.com/HarshitSohaney/Mapper-65",
+    from: new Date("2022-01-01"),
+    to: new Date("2022-04-01")
   },
   {
     name: "Moodlist - Mood Predictor",
     image: "Pictures/spotify.jpg",
-    link: "https://github.com/maiseyperelonia/moodlist"
+    link: "https://github.com/maiseyperelonia/moodlist",
+    from: new Date("2023-09-01"),
+    to: new Date("2023-12-30")
   },
   {
     name: "Block Stack Game",
     image: "Pictures/block.png",
-    link: "https://github.com/HarshitSohaney/Block-Stack"
+    link: "https://github.com/HarshitSohaney/Block-Stack",
+    from: new Date("2022-01-01"),
+    to: new Date("2022-04-30")
+  },
+  {
+    name: "IDK Them",
+    image: "Pictures/you_dont_know.png",
+    link: "https://idk-them.vercel.app",
+    from: new Date("2024-03-01"),
+    to: new Date("2024-04-01")
   },
   {
     name: "Boomerang - Lost & Found",
     image: "Pictures/boomerang.png",
-    link: "https://github.com/HarshitSohaney/Boomerang-GDSC2021"
+    link: "https://github.com/HarshitSohaney/Boomerang-GDSC2021",
+    from: new Date("2021-01-01"),
+    to: new Date("2021-04-30")
   },
   {
     name: "FINCH SD Card System",
     image: "Pictures/UTAT.png",
-    link:"https://github.com/cam-rod/UTAT-spi-sd-test"
+    link:"https://github.com/cam-rod/UTAT-spi-sd-test",
+    from: new Date("2021-01-01"),
+    to: new Date("2022-04-30")
   },
   {
     name: "Fake News Detection AI",
     image: "Pictures/coursera.png",
-    link:"https://www.coursera.org/account/accomplishments/certificate/WXKW23UCFY4C"
+    link:"https://www.coursera.org/account/accomplishments/certificate/WXKW23UCFY4C",
+    from: new Date("2020-01-01"),
+    to: new Date("2020-02-30")
   }
-  
 ];
 
 function generateProjectsHTML(type="desktop", num_to_load=3) {
@@ -47,6 +62,22 @@ function generateProjectsHTML(type="desktop", num_to_load=3) {
   if (num_to_load > projects.length) {
     num_to_load = projects.length;
   }
+
+  // Sort projects by 'to' date (most recent first), then by 'from' date
+  projects.sort((a, b) => {
+    const aTo = a.to;
+    const bTo = b.to;
+    const aFrom = a.from;
+    const bFrom = b.from;
+
+    if (aTo > bTo) return -1;
+    if (aTo < bTo) return 1;
+
+    if (aFrom > bFrom) return -1;
+    if (aFrom < bFrom) return 1;
+
+    return 0;
+  });
 
   let html = '<tbody>';
   for (let i = 0; i < num_to_load; i += 3) {
