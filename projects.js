@@ -42,9 +42,14 @@ const projects = [
   
 ];
 
-function generateProjectsHTML(type="desktop") {
+function generateProjectsHTML(type="desktop", num_to_load=3) {
+  // make sure num_to_load is not greater than the number of projects
+  if (num_to_load > projects.length) {
+    num_to_load = projects.length;
+  }
+
   let html = '<tbody>';
-  for (let i = 0; i < projects.length; i += 3) {
+  for (let i = 0; i < num_to_load; i += 3) {
     html += '<tr>';
     for (let j = i; j < i + 3 && j < projects.length; j++) {
       const project = projects[j];
@@ -79,6 +84,15 @@ function loadProjects() {
 
     const mobile_container = document.getElementById('projects-container-mobile');
     mobile_container.innerHTML = generateProjectsHTML("mobile");
+
+    // add a click event listener to the load-more-button element
+    const loadMoreButton = document.getElementById('load-more-button');
+    loadMoreButton.addEventListener('click', () => {
+      const container = document.getElementById('projects-container');
+          container.innerHTML = '';
+          container.innerHTML = generateProjectsHTML("desktop", projects.length);  
+          loadMoreButton.style.display = 'none';
+    });
 }
   
 
