@@ -14,8 +14,8 @@
 ## Activity 3
 
 ## Activity 4
+<img width="1349" alt="Screenshot 2024-09-18 at 6 10 22 PM" src="https://github.com/user-attachments/assets/4a73fae5-7532-40da-a421-699e64a82680">
 
-<img width="1342" alt="444_s4_1" src="https://github.com/user-attachments/assets/81f38f23-107a-4dc4-9158-48e5f14567c9">
 <img width="1340" alt="444_s4_2" src="https://github.com/user-attachments/assets/2da6b641-7208-4951-b6d9-4155df6f4d37">
 
 ## Activity 5
