@@ -1,0 +1,44 @@
+#search {
+    border: none;
+    color: #fff;
+    width: 100%;
+    font: 500 25px 'Poppins', sans-serif;
+    outline: none;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    /* make it transition with a fade */
+    transition: 0.2s;
+}
+
+.no-outline:focus {
+    outline: none;
+  }
+
+.topbar {
+    display: none;
+}
+
+.topbar-display {
+    display: flex;
+    height: 50px;
+    padding: 2% 20px;
+    z-index: 1;
+}
+  .navbar-fixed {
+    top: 10px;
+    position: fixed;
+    background-color: #173c6a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+  }
+
+@media screen and (max-width: 600px) {
+    #search {
+        border-radius: 0;
+    }
+    .navbar-fixed {
+        top: 0;
+    }
+}

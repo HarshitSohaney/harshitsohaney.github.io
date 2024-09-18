@@ -1,0 +1,50 @@
+.project-padding {
+    padding: 40px;
+    background-color: #121212;
+    transition: 0.4s;
+}
+.col-style-project {
+    width: 100%;
+    text-align: left;
+    background-color: grey;
+    color: white;
+}
+.img-container {
+    width:100%;
+    padding: 0;
+}
+
+.table-mobile {
+    display: none;
+    table-layout: fixed;
+}
+
+.table-desktop {
+    display: table;
+    table-layout: fixed;
+}
+
+@media screen and (max-width: 950px) {
+    .table-mobile {
+        display: table;
+    }
+    .table-desktop {
+        display: none;
+    }
+    .col-sm-3 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-sm-3 {
+        font-size: small;
+    }
+    .project-padding {
+        padding: 0.5em;
+    }
+}
+
+.col-img-project img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

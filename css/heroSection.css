@@ -1,0 +1,110 @@
+
+#hero {
+  color: #fff;
+  height: 20em;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-content: end;
+}
+.hero-text {
+  margin-top: auto;
+  padding-left: 2em;
+  padding-bottom: 1em;
+}
+
+.hero-text h1 {
+  font-size: 4em;
+  font-weight: 600;
+  margin: 10px 0 30px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.section {
+  position: relative;
+}
+
+.hero-background-img {
+  background-image: url(../Pictures/hero2.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* About Me 
+---------------------*/
+.about-text h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin: 10px 0 30px;
+  font-family: 'Montserrat';
+}
+
+.about-text h3 {
+  margin-top: 90px;
+  font-weight: 1000;
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .about-text h3 {
+    font-size: 35px;
+    font-weight: 1000;
+    text-align: center;
+  }
+  .about-text h6 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .about-avatar {
+    margin-top: 30px;
+    border-radius: 50%;
+    align-items: center;
+  }
+  .about-text {
+    font-size:40px;
+    text-align: center;
+  }
+  .about-list {
+    text-align: center;
+  }
+}
+.about-text h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 10px;
+}
+.about-text p {
+  font-size: 18px;
+  max-width: 450px;
+}
+.about-text p mark {
+font-weight: 600;
+color: #20247b;
+}
+
+.about-list {
+  padding-top: 10px;
+  font-size: 10px;
+}
+.about-list .media {
+  padding: 10px 0px 20px 0px;
+  color:aliceblue;
+}
+.about-list p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+.theme-color {
+  color: #fc5356;
+}
+.dark-color {
+  color: #ffffff;
+}

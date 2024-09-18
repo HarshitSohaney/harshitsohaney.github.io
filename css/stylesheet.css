@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@100;400;600;800&display=swap');
+:root {
+  overflow: auto;
+  scrollbar-color: #3a3a3a transparent;
+  scrollbar-width: thin;
+}
+body {
+  background-color: #000000;
+}
+.container-grid {
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  background: rgb(59,99,148);
+  background: linear-gradient(180deg, #173c6a 0%, #121212 5%); 
+}
+.sidebar {
+  height: 100%;
+  position: fixed;
+  width: 15%;
+  top: 0;
+  color: white;
+  left: 0;
+  background-color: rgb(0,0,0);
+  overflow: scroll;
+  /* make scrollbar invisible */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar a {
+  padding: 8px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  }
+  
+  .sidebar a:hover {
+  cursor: pointer;
+  opacity: .7;
+  transition: 0.3s;
+  }
+
+.sidebar .basic-info {
+  padding-top: 20px;
+}
+
+.song-selection {
+  color:#f1f1f1;
+  background-color: #191414;
+  font-size:large;
+  font-family: Montserrat;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Side nav */
+.sidenav {
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  padding-top: 5px;
+  z-index: 2;
+}
+
+.sidenav a {
+  padding: 100px 2px 6px 5px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.play-page-section {
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play-page-section input:hover{
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.dissapearLinks {
+  display: none;
+}
+
+h4 {
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color: white;
+}
+
+.Navbar {
+  display: grid; 
+  padding: 10px;
+  grid-template-columns: 1fr 0.9fr 1.2fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Links Links Links"
+    "Nav Nav Nav"
+    "Nav Nav Nav"
+    "Nav Nav Nav"; 
+  grid-area: 1 / 1 / 4 / 2; 
+}
+.Links, .dissapearLinks { 
+  grid-area: Links;
+  white-space: nowrap;
+  flex-direction: column;
+  background-color: #121212;
+  border-radius: 6px;
+  padding: 0.5em 0;
+}
+.Links {
+  display: flex;
+}
+.Links p{
+  display: inline-block;
+  margin: inherit;
+ }
+.Nav { grid-area: Nav; }
+
+.main-content { 
+  position: absolute;
+  height: 90%;
+  width: 85%;
+  overflow: auto;
+  background-color: #000000;
+  top: 10px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow-x: hidden;
+ }
+
+ nav {
+  height: auto;
+  margin: 1em 0;
+  background-color: #121212;
+  border-radius: 6px;
+ }
+
+ /* style for 775px */
+@media screen and (max-width: 950px){
+  .play-page-section {
+    width: 35%;
+  }
+  .sidebar {
+    width: 25%;
+  }
+  .main-content {
+    width: 75%;
+    height: 100%;
+  }
+}
+
+ @media screen and (max-width: 600px) {
+  #sidebar {
+    display: none;
+    width: 0;
+  } 
+  .main-content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .container-grid {
+    font-size: small;
+  }
+  .play-page-section {
+    width: 50%;
+  }
+}

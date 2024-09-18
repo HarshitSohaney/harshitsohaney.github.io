@@ -1,0 +1,163 @@
+.footerStyle {
+    background-color: #000000;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    font-weight: 400;
+  }
+
+.footer {
+  display: grid; 
+  grid-template-columns: 0.7fr 1.7fr 0.6fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "footer-info footer-player footer-right"
+    "footer-info footer-player footer-right"
+    "footer-info footer-player footer-right"; 
+  grid-area: 3 / 1 / 4 / 4;  
+}
+.player-buttons { 
+
+  grid-area: player-buttons;
+  padding: 10px;
+ }
+.footer-info { 
+  grid-area: footer-info;
+  padding: 5px;
+  color: #fff;
+  white-space: nowrap;
+ }
+.footer-right { 
+  grid-area: footer-right; 
+} 
+.footer-player { 
+  grid-area: footer-player;
+  padding: 10px;
+}
+/* The progress container (grey background) */
+.progress-container {
+    width: 70%;
+    height: 3px;
+    border-radius: 6px;
+    margin: auto;
+    background: #ccc;
+    padding: 0;
+  }
+.progress-bar-wrapper {
+  padding: 10px;
+}
+  
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 100%;
+  border-radius: 6px;
+  background: #1ed760;
+  width: 0%;
+}
+.album-background {
+  background-color: #343232;
+    color: white;
+}
+.album-cover {
+  scale: 90%;
+  border-radius: 6px;
+}
+.audio-buttons {
+  margin-top: 7px;
+}
+#previous-button {
+  align-items: right;
+}
+#next-button {
+  align-items: left;
+}
+.audio-buttons:active {
+  transform: translateY(1px);
+}
+.album-info {
+  display: flex;
+  flex-direction: row;
+  padding: inherit;
+}
+.album-info__text {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+.album-info__text p {
+  margin: inherit;
+}
+.album-text-secondary {
+  font-size: 8px;
+  color:rgb(174, 174, 174);
+  font-weight: 600;
+  padding: 0;
+}
+.album-name {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: montserrat;
+}
+
+@media screen and (max-width: 950px) {
+  .float-end, .float-start {
+    align-items: center;
+    display: flex;
+  }
+  .float-end {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 950px) and (min-width: 600px) {
+  .footer-info {
+    display: none;
+  }
+  .footer {
+    grid-template-areas: 
+    "footer-player footer-player footer-player"
+    "footer-player footer-player footer-player"
+    "footer-player footer-player footer-player"; 
+  }
+  .progress-container {
+    width: 100%;
+  }
+  .footerStyle {
+    max-width: 25%;
+  }
+  #previous-button, #next-button {
+    width: 18px;
+    height: 18px;
+  }
+  #play-button {
+    width: 18px;
+    height: 18px;
+  }
+  .audio-buttons {
+    margin-top: 0px;
+  }
+  .player-buttons {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-info, .footer-right {
+    display: none;
+  }
+  .float-end, .float-start {
+    align-items: baseline;
+    display: flex;
+  }
+  .footer{
+    grid-template-areas:
+    "footer-player footer-player footer-player"
+    "footer-player footer-player footer-player";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
