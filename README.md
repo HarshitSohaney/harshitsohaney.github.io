@@ -1,4 +1,6 @@
 # Personal Website
+**Note**: This repo is a clone of https://github.com/HarshitSohaney/Personal-Website.git
+### The website is a clone of https://www.harshitsohaney.com
 
 <img width="1327" alt="image" src="https://github.com/HarshitSohaney/Personal-Website/assets/73911621/2df3898d-4769-4542-84d4-4bd84a6daf4a">
 
