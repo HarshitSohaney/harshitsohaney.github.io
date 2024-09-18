@@ -9,10 +9,9 @@
 ## Activity 2
 
 <img width="950" alt="444_s2" src="https://github.com/user-attachments/assets/011cd29c-f772-47cc-a0f9-ca25f0bb721d">
+<img width="1341" alt="444_s3" src="https://github.com/user-attachments/assets/d844f521-46a6-4a2b-92cd-83cd89030c28">
 
 ## Activity 3
-
-<img width="1341" alt="444_s3" src="https://github.com/user-attachments/assets/d844f521-46a6-4a2b-92cd-83cd89030c28">
 
 ## Activity 4
 
